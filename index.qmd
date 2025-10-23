@@ -1,8 +1,19 @@
 ---
 title: "Rei Miyashiro"
+image: media/cs201.jpg
+about: 
+  template: jolla
+  image-shape: rounded
+  image-width: 10cm
+  links:
+    - icon: github
+      href: https://github.com/reimn11/reimn11.github.io
+    - text: Email
+      icon: envelope
+      href: rei.miyashironakaima@student.chaminade.edu
 ---
 
-This is a Test!
+Hello, I'm Rei Miyashiro. I am a Chaminade University student and data science major.
 
 To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
 
