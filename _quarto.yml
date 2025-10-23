@@ -12,9 +12,9 @@ website:
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: 
+      light: mintty
+      dark: superhero
     css: styles.css
     toc: true
 
