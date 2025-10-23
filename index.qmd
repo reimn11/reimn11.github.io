@@ -3,7 +3,7 @@ title: "Rei Miyashiro"
 image: media/cs201.jpg
 about: 
   template: jolla
-  image-shape: rounded
+  image-shape: rounded 
   image-width: 10cm
   links:
     - icon: github
