@@ -1,6 +1,7 @@
 ---
 title: "Rei Miyashiro"
 image: media/cs201.jpg
+toc: true
 about: 
   template: jolla
   image-shape: rounded 
@@ -12,6 +13,14 @@ about:
       icon: envelope
       href: rei.miyashironakaima@student.chaminade.edu
 ---
+
+# this is an h1 header
+
+## this is an h2 header
+
+### this is an h3 header
+
+This is a [link](google.com).
 
 Hello, I'm Rei Miyashiro. I am a Chaminade University student and data science major.
 

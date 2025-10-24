@@ -3,12 +3,16 @@ project:
   output-dir: docs
 
 website:
-  title: "reimn11.github.io"
+  #title: "Rei Miyashiro"
   navbar:
-    left:
+    right:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - resume.qmd
+      - icon: github
+        href: https://github.com/reimn11
+        target: blank
+      
 
 format:
   html:

@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "Rei Miyashiro",
     "section": "",
-    "text": "Hello, I’m Rei Miyashiro. I am a Chaminade University student and data science major.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a link.\nHello, I’m Rei Miyashiro. I am a Chaminade University student and data science major.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,19 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#this-is-an-h2-header",
+    "href": "index.html#this-is-an-h2-header",
+    "title": "Rei Miyashiro",
+    "section": "",
+    "text": "This is a link.\nHello, I’m Rei Miyashiro. I am a Chaminade University student and data science major.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "resume.html",
+    "href": "resume.html",
+    "title": "Resume",
+    "section": "",
+    "text": "Download PDF file."
   }
 ]
