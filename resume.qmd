@@ -5,7 +5,6 @@ title: "Resume"
 This is my resume.
 
 ```         
-
 ```
 
 <embed src="media/resume.pdf" type="application/pdf" width="100%" height="800px" />

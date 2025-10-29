@@ -9,9 +9,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "About Me",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Hello! I’m Rei Miyashiro, a Data Science major at Chaminade University of Honolulu.\nI’m interested in data visualization, and sports analytics.\nThis page shares more about my interests and background."
   },
   {
     "objectID": "index.html#this-is-an-h2-header",
@@ -26,5 +26,12 @@
     "title": "Resume",
     "section": "",
     "text": "This is my resume."
+  },
+  {
+    "objectID": "about.html#about-me",
+    "href": "about.html#about-me",
+    "title": "About Me",
+    "section": "",
+    "text": "Hello! I’m Rei Miyashiro, a Data Science major at Chaminade University of Honolulu.\nI’m interested in data visualization, and sports analytics.\nThis page shares more about my interests and background."
   }
 ]

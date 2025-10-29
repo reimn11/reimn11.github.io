@@ -1,5 +1,7 @@
 ---
 title: "About Me"
+image: media/cs201.jpg
+toc: true
 ---
 
 ## About Me
