@@ -1,0 +1,10 @@
+---
+title: "About Me"
+---
+
+## About Me
+
+Hello! I’m Rei Miyashiro, a Data Science major at Chaminade University of Honolulu.\
+I’m interested in data visualization, and sports analytics.
+
+This page shares more about my interests and background.

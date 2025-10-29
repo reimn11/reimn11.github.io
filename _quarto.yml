@@ -5,10 +5,11 @@ project:
 website:
   #title: "Rei Miyashiro"
   navbar:
-    right:
+    left:
       - href: index.qmd
         text: Home
       - resume.qmd
+      - about.qmd
       - icon: github
         href: https://github.com/reimn11
         target: blank
