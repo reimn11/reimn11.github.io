@@ -14,18 +14,7 @@ about:
       href: rei.miyashironakaima@student.chaminade.edu
 ---
 
-# this is an h1 header
-
-## this is an h2 header
-
-### this is an h3 header
-
-This is a [link](google.com).
 
 Hello, I'm Rei Miyashiro. I am a Chaminade University student and data science major.
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
-
-```{r}
-1 + 1
-```
+I took this picture in Kaka'ako Waterfront Park.

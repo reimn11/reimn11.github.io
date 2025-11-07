@@ -10,6 +10,9 @@ website:
         text: Home
       - resume.qmd
       - about.qmd
+      - text: "🐧 Penguins"
+        href: https://reimn11.github.io/dashboards/penguins.html
+        target: blank
       - icon: github
         href: https://github.com/reimn11
         target: blank
