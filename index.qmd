@@ -11,7 +11,7 @@ about:
       href: https://github.com/reimn11/reimn11.github.io
     - text: Email
       icon: envelope
-      href: rei.miyashironakaima@student.chaminade.edu
+      href: mailto:rei.miyashironakaima@student.chaminade.edu
 ---
 
 

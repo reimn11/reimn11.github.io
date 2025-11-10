@@ -33,6 +33,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
@@ -72,7 +73,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,33 +118,48 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<div class="quarto-about-jolla">
-  <img src="media/cs201.jpg" class="about-image
-  rounded " style="width: 5cm;">
- <header id="title-block-header" class="quarto-title-block default">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">About me</h1>
 </div>
+
+
+
 <div class="quarto-title-meta">
+
+    
+  
+    
   </div>
-</header><main class="content" id="quarto-document-content">
+  
+
+
+</header>
+
+
 <p>Hello! I’m Rei Miyashiro, a Data Science major at Chaminade University of Honolulu.<br>
 I’m interested in data visualization, and sports analytics.</p>
-<div class="quarto-figure quarto-figure-center" style="border-radius:50%;">
+<p><img src="media/japan.png" class="img-fluid" width="250"></p>
+<p>I am from Japan and I came Hawaii 2021. I graduated from KCC and transferd to Chaminade University.</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="media/car.jpg" class="img-fluid figure-img" width="250"></p>
-<figcaption>My dog at sunset</figcaption>
+<p><img src="media/volleyball.gif" class="img-fluid figure-img" width="500"></p>
+<figcaption>I plyed vollyball in Japan for 8 years.</figcaption>
 </figure>
 </div>
-<p>I am from Japan and I came Hawaii 2021. I graduated from KCC and transferd to Chaminade University.</p>
-<p>I play volleyball since I was 10 years old. I love to watch baseball and play baseball. I also play softball almost everyweekends.</p>
+<p><img src="media/baseball.gif" class="img-fluid" width="500"></p>
+<p><img src="media/softball.gif" class="img-fluid" width="500"></p>
+<p>I love to watch baseball and play baseball. I also play softball almost every weekends.</p>
 
 
-</main>  
-</div>
- <!-- /main -->
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -308,6 +324,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   } else {
     toggleColorMode(false);
   }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
   const isCodeAnnotation = (el) => {
     for (const clz of el.classList) {
       if (clz.startsWith('code-annotation-')) {                     

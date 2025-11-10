@@ -1,18 +1,27 @@
 ---
 title: "About me"
-image: media/cs201.jpg
-toc: true
-about: 
-  template: jolla
-  image-shape: rounded 
-  image-width: 5cm
+
 ---
 
 Hello! I’m Rei Miyashiro, a Data Science major at Chaminade University of Honolulu.\
 I’m interested in data visualization, and sports analytics.
 
-![My dog at sunset](media/car.jpg){width="250px" style="border-radius:50%;"}
+![](media/japan.png){width="250px"}
+
 
 I am from Japan and I came Hawaii 2021. I graduated from KCC and transferd to Chaminade University.
 
-I play volleyball since I was 10 years old. I love to watch baseball and play baseball. I also play softball almost everyweekends.
+![I plyed vollyball in Japan for 8 years. 
+](media/volleyball.gif){width="500px"}
+
+
+
+
+
+![](media/baseball.gif){width="500px"}
+
+
+![](media/softball.gif){width="500px"}
+
+
+I love to watch baseball and play baseball. I also play softball or baseball almost every weekends.

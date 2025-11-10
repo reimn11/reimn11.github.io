@@ -1,5 +1,5 @@
 /* css styles */
-, h1{
+h1{
   color: skyblue;
 }
 h2{
@@ -11,10 +11,15 @@ h3{
   font-style: italic;
 }
 
-body,p {
+p {
+  color:black;
+}
+
+body {
   font-family: Georgia;
   font-size: 15px;
-  background-color: cornsilk ;
+  color:black;
+  background-color: lightyellow;
 }
 
 li, ul, ol {
@@ -25,6 +30,8 @@ a{
   color: pink;
 }
 
+
+
 a:hover{
   color: magenta;
 }
@@ -32,3 +39,20 @@ a:hover{
 a:visited {
   color:black;
 }
+
+
+
+/* ----- LIGHT MODE ----- */
+@media (prefers-color-scheme: light) {
+  .about-links a i {
+    color: #ff69b4; /* pink icons in light mode */
+  }
+
+
+
+/* ----- DARK MODE ----- */
+@media (prefers-color-scheme: dark) {
+  .about-links a i {
+    color: #00ffff; /* cyan icons in dark mode */
+  }
+
