@@ -11,8 +11,10 @@ I’m interested in data visualization, and sports analytics.
 
 I am from Japan and I came Hawaii 2021. I graduated from KCC and transferd to Chaminade University.
 
-![I plyed vollyball in Japan for 8 years. 
-](media/volleyball.gif){width="500px"}
+![](media/volleyball.gif){width="500px"}
+
+
+I plyed vollyball in Japan for 8 years.
 
 
 
