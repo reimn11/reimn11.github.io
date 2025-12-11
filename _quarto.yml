@@ -16,6 +16,7 @@ website:
       - icon: github
         href: https://github.com/reimn11
         target: blank
+      - text: "final dashboard"
       
 
 format:
