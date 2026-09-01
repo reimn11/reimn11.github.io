@@ -17,3 +17,144 @@ about:
 Hello, I'm Rei Miyashiro. I am a Chaminade University student and data science major.
 
 I took this picture in Kaka'ako Waterfront Park.
+
+```{r}
+#install.packages("baseballr")
+library(baseballr)
+library(tidyverse)
+
+playerid_lookup(last_name = "Stevenson", first_name = "Andrew")
+```
+
+```{r}
+stevenson_id <- playerid_lookup("Stevenson", "Andrew") |>
+  filter(birth_year == 1994) |>
+  pull(mlbam_id)
+
+mlb_people(person_ids = stevenson_id)
+```
+
+```{r}
+library(httr2)
+
+stats <- request("https://statsapi.mlb.com/api/v1/people/664057/stats") |>
+  req_url_query(stats = "yearByYear", group = "hitting") |>
+  req_perform() |>
+  resp_body_json(simplifyVector = TRUE)
+
+stats$stats$splits[[1]] |> as_tibble() |> glimpse()
+```
+
+```{r}
+library(tidyverse)
+
+splits <- stats$stats$splits[[1]]
+
+tidy_stats <- splits |>
+  as_tibble() |>
+  unpack(c(stat, team, player, league, sport), names_sep = "_")
+
+glimpse(tidy_stats)
+```
+
+```{r}
+playerid_lookup(last_name = "Reyes", first_name = "Franmil")
+```
+
+```{r}
+reyes_id <- playerid_lookup("Reyes", "Franmil") |> pull(mlbam_id)
+
+reyes_stats <- request(paste0("https://statsapi.mlb.com/api/v1/people/", reyes_id, "/stats")) |>
+  req_url_query(stats = "yearByYear", group = "hitting") |>
+  req_perform() |>
+  resp_body_json(simplifyVector = TRUE)
+
+reyes_stats$stats$splits[[1]] |>
+  as_tibble() |>
+  unpack(c(stat, team, player, league, sport), names_sep = "_") |>
+  glimpse()
+```
+
+```{r}
+reyes |>
+  filter(sport_abbreviation %in% c("MLB", "AAA")) |>
+  select(season, sport_abbreviation, team_name,
+         stat_gamesPlayed, stat_plateAppearances,
+         stat_avg, stat_obp, stat_slg, stat_ops, stat_homeRuns)
+```
+
+d
+
+```{r}
+resp <- request(paste0("https://statsapi.mlb.com/api/v1/people/", reyes_id, "/stats")) |>
+  req_url_query(stats = "yearByYear", group = "hitting") |>
+  req_perform() |>
+  resp_body_json(simplifyVector = TRUE)
+
+reyes <- resp$stats$splits[[1]] |>
+  as_tibble() |>
+  unpack(c(stat, team, player, league, sport), names_sep = "_")
+
+reyes
+```
+
+```{r}
+reyes |> count(sport_id, sport_abbreviation)
+```
+
+```{r}
+get_level <- function(id, sport) {
+  resp <- request(paste0("https://statsapi.mlb.com/api/v1/people/", id, "/stats")) |>
+    req_url_query(stats = "yearByYear", group = "hitting", sportId = sport) |>
+    req_perform() |>
+    resp_body_json(simplifyVector = TRUE)
+  
+  Sys.sleep(0.3)
+  
+  if (length(resp$stats$splits) == 0) return(NULL)
+  
+  resp$stats$splits[[1]] |>
+    as_tibble() |>
+    unpack(c(stat, team, player, league, sport), names_sep = "_")
+}
+
+reyes <- map_dfr(c(1, 11, 12, 13, 14), \(s) get_level(reyes_id, s))
+
+reyes |> count(sport_id, sport_abbreviation)
+```
+
+```{r}
+totals_by_level <- reyes |>
+  mutate(across(c(stat_gamesPlayed, stat_plateAppearances, stat_atBats,
+                  stat_hits, stat_doubles, stat_triples, stat_homeRuns,
+                  stat_baseOnBalls, stat_strikeOuts, stat_hitByPitch,
+                  stat_sacFlies, stat_totalBases, stat_rbi, stat_stolenBases),
+                as.integer)) |>
+  group_by(sport_id, sport_abbreviation) |>
+  summarise(
+    seasons = n_distinct(season),
+    g   = sum(stat_gamesPlayed),
+    pa  = sum(stat_plateAppearances),
+    ab  = sum(stat_atBats),
+    h   = sum(stat_hits),
+    hr  = sum(stat_homeRuns),
+    bb  = sum(stat_baseOnBalls),
+    so  = sum(stat_strikeOuts),
+    hbp = sum(stat_hitByPitch),
+    sf  = sum(stat_sacFlies),
+    tb  = sum(stat_totalBases),
+    .groups = "drop"
+  ) |>
+  mutate(
+    avg    = h / ab,
+    obp    = (h + bb + hbp) / (ab + bb + hbp + sf),
+    slg    = tb / ab,
+    ops    = obp + slg,
+    iso    = slg - avg,
+    k_pct  = so / pa,
+    bb_pct = bb / pa
+  ) |>
+  arrange(sport_id)
+
+totals_by_level
+```
